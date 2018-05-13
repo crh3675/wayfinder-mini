@@ -36,4 +36,10 @@ A sample command line execution would be:
 
     node app -b 5x5 -m NNEWSWESNS
     
+You can run some basic tests as well:
+
+    node test.js
+    
+If there is no output, then all tests passed.
+    
 Thats it!  You will be provided a console notice that contains how far you got in the game.
