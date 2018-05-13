@@ -54,4 +54,8 @@ runner.init(args.board, args.movements)
 })
 .then(results => {
     console.log(results);    
+})
+.catch(err => {
+    console.error('Could not start the game, something went wrong');
+    console.error(err.toString())
 });
