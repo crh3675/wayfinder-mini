@@ -41,5 +41,9 @@ You can run some basic tests as well:
     node test.js
     
 If there is no output, then all tests passed.
+
+If you don't want build a board to run and test, you can pass the `-r` or --``random` flag"
+
+    node app -r 100x100 -m NNEWSWESNS
     
 Thats it!  You will be provided a console notice that contains how far you got in the game.
