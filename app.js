@@ -35,7 +35,7 @@ parser.addArgument(
 parser.addArgument(
   [ '-b', '--board' ],
   {
-    required : true,      
+    required : false,      
     help: `Board name - 5x5 or 10x10.  Boards are stored in the boards directory. Each board contains
     a matrix that the player can try to get through.  A 0 (zero) denotes a wall whereas any other
     value can be passed through.
@@ -43,12 +43,24 @@ parser.addArgument(
   }
 );
 
+parser.addArgument(
+  [ '-r', '--random' ],
+  {
+    required : false,      
+    help: `Create a random board with provided bounds.  Send bounds as wXh. Example: -r=100x100`
+  }
+);
+
 args = parser.parseArgs();
+
+if(!args.board && !args.random) {
+    throw 'Must supply either a board or random';
+}
 
 // Invoke new Wayfinder instance and run
 const runner = new Wayfinder();
 
-runner.init(args.board, args.movements)
+runner.init(args.board, args.movements, args.random)
 .then(runner => {
     return runner.execute()
 })
