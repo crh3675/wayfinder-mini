@@ -42,7 +42,7 @@ You can run some basic tests as well:
     
 If there is no output, then all tests passed.
 
-If you don't want build a board to run and test, you can pass the `-r` or --``random` flag"
+If you don't want to build a board, you can pass the `-r` or `--random` flag"
 
     node app -r 100x100 -m NNEWSWESNS
     
