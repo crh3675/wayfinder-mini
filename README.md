@@ -4,6 +4,7 @@ This is a mini wayfinder application that gives the player coins for every succe
 
 The functionality is similar to PacMan, just without ghosts chasing you!  You can easily create boards by adding a configuration to the boards directory.  A board is a JSON file with the following structure:
 
+```javascript
     {
         "starting_position" : [x, y],
         "matrix" : [
@@ -19,8 +20,9 @@ The functionality is similar to PacMan, just without ghosts chasing you!  You ca
             etc...
         ]
     }
-    
-Each 0 (zero) represent a wall that cannot be passed whereas any other character (non-whitespace) represents a part of the board that the player can move into.
+```
+
+Each 0 (zero) represents a wall that cannot be passed whereas any other character (non-whitespace) represents a part of the board that the player can move into.
 
 To play the game, you would first need to run:
 
