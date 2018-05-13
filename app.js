@@ -1,3 +1,14 @@
+/**
+ * Wayfinder Mini App.
+ *
+ * This mini application is meant to boggle the user while they try to gather the most coins
+ * while traversing a game board using different cardinal directions
+ *
+ * @link   https://github.com/crh3675/wayfinder-mini
+ * @file   app.js - Main application loader
+ * @author Craig R Hoover.
+ * @copyright 2018, Craig R Hoover.
+ */
 const argparser = require('argparse').ArgumentParser;
 const Wayfinder = require('./lib/wayfinder');
 let args;
@@ -25,7 +36,7 @@ parser.addArgument(
   [ '-b', '--board' ],
   {
     required : true,      
-    help: `Board name.  Boards are stored in the boards directory.Each board contains
+    help: `Board name - 5x5 or 10x10.  Boards are stored in the boards directory. Each board contains
     a matrix that the player can try to get through.  A 0 (zero) denotes a wall whereas any other
     value can be passed through.
     `
