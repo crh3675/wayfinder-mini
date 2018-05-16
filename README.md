@@ -46,4 +46,8 @@ If you don't want to build a board, you can pass the `-r` or `--random` flag"
 
     node app -r 100x100 -m NNEWSWESNS
     
+If you have a custom JSON config file, you can specify the file path using `-c` or `--custom` flag"
+
+    node app -c ./path/to/config.json -m NNEWSWESNS
+    
 Thats it!  You will be provided a console notice that contains how far you got in the game.

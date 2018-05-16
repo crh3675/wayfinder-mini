@@ -51,16 +51,39 @@ parser.addArgument(
   }
 );
 
+parser.addArgument(
+  [ '-c', '--custom' ],
+  {
+    required : false,      
+    help: `Custom board configuration file path.  Must be a JSON file in the same format as:
+    {
+        "starting_position" : [x, y],
+        "matrix" : [
+            [1,0,1,0,1,0,1,0],
+            [1,0,1,0,1,0,1,0],
+            [1,0,1,0,1,0,1,0],
+            [1,0,1,0,1,0,1,0],
+            [1,0,1,0,1,0,1,0],
+            [1,0,1,0,1,0,1,0],
+            [1,0,1,0,1,0,1,0],
+            [1,0,1,0,1,0,1,0],
+            [1,0,1,0,1,0,1,0],
+            etc...
+        ]
+    }`
+  }
+);
+
 args = parser.parseArgs();
 
-if(!args.board && !args.random) {
+if(!args.board && !args.random && !args.custom) {
     throw 'Must supply either a board or random';
 }
 
 // Invoke new Wayfinder instance and run
 const runner = new Wayfinder();
 
-runner.init(args.board, args.movements, args.random)
+runner.init(args.board, args.movements, args.random, args.custom)
 .then(runner => {
     return runner.execute()
 })
