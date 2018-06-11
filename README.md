@@ -21,6 +21,7 @@ The functionality is similar to PacMan, just without ghosts chasing you!  You ca
         ]
     }
 ```
+Note that starting_position is based on cartesian coordinates.
 
 Each 0 (zero) represents a wall that cannot be passed whereas any other character (non-whitespace) represents a part of the board that the player can move into.
 
